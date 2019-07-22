@@ -10,7 +10,7 @@
     "build:all": "npm run clean && npm run build:ng && npm run build:nw",
     "build": "ng build",
     "build:ng": "ng build --prod --output-path ./dist-ng",
-    "build:nw": "build --concurrent --tasks mac-x64 --mirror https://dl.nwjs.io/ .",
+    "build:nw": "npm run clean && npm run build:ng && build --concurrent --tasks mac-x64 --mirror https://dl.nwjs.io/ .",
     "clean": "rimraf ./dist-ng ./dist",
     "test": "ng test",
     "lint": "ng lint",
